@@ -6,7 +6,6 @@ if (age >= 18) {
   console.log("You are eligible to vote.");
 }
 
-
 // if -else statement
 
 let isRaining = true;
@@ -30,7 +29,6 @@ if (score >= 90) {
 } else {
   console.log("Grade: F");
 }
-
 
 // switch statement
 
@@ -58,7 +56,7 @@ if (month === "january" || month === "febraury") {
 } else {
   console.log("It’s a cold months.");
 }
- 
+
 // for ! operator
 let isLoggedIn = false;
 

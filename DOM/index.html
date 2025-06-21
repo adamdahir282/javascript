@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="myH1">hello by hand i changed</h1>
+    <h1 id="myOtherH1">the second h1</h1>
+    <script>
+    //   for (let i = 0; i < 100; i++) {
+    //     let anotherH1 = document.createElement("h1");
+    //     anotherH1.textContent = i + " hello by js";
+    //     document.body.appendChild(anotherH1);
+    //   }
+    // let myH1 = document.getElementById("myH1");
+    // myH1.textContent = myH1.textContent + " js changed too";
+    // myH1.style.color = "red";
+    // myH1.style.fontSize = "150px";
+    // myH1.style.textDecoration = "underline";
+
+
+    // let myOtherH1 = document.getElementById("myOtherH1");
+    // myOtherH1.textContent = myOtherH1.textContent + " js changed too";
+    // myOtherH1.style.color = "green";
+    // myOtherH1.style.fontSize = "75px";
+    // myOtherH1.style.textDecoration = "overline";
+
+
+
+   let allH1s = document.getElementsByTagName("h1")
+   allH1s[0].style.color = "blue";
+   allH1s[1].style.color = "yellow";
+   document.body.style.backgroundColor = "black";
+
+    </script>
+  </body>
+</html>
