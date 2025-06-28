@@ -1,18 +1,59 @@
-// for loop
+//for (let counter = 10; counter > 0; counter--) {
+ // console.log(counter,"adam","dahir");
+ 
+//}
 
-for (let index = 0; index < 20; index++) {
-  console.log("adam"); // prints "adam" 20 times
+
+// for (let counter = 0; counter < 10; counter++) {
+  
+//   if( counter == 5){
+//     //break;
+//     continue;
+//   }
+//   console.log(counter, "adam", "dahir");
+// }
+
+
+
+// let counter = 0;
+// while (counter < 10) {
+//   console.log("ahmed");
+//   counter++;
+//   }
+
+
+// for (let i = 0; i < 10; i++) {
+//   console.log("adam");
+  
+// }
+
+// let i = 0;
+// do {
+//  console.log("safia");
+//  i++;
+// } while (i < 10);
+
+// 
+
+
+
+// const fruits = ["apple", "banana", "cherry"];
+
+// for (let fruit of fruits) {
+//   console.log(fruit);
+// }
+
+
+const person = {
+  name: "Adam",
+  age: 25,
+  city: "Amsterdam",
+};
+
+for (let key in person) {
+  console.log(key , person[key]);
 }
 
-let countries = ["somalia", "kenya", "tanzania", "uganda", "south sudan"];
 
-for (let index = 0; index < countries.length; index++) {
-  console.log(countries);
-} // prints all countries in the array
-
-let cities = ["london", "paris", "rome", "madrid", "barcelona"];
-for (let i = 0; i < cities.length; i++) {
-   console.log(cities);}
-   
 
 
