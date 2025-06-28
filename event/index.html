@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Styled Button & Output</title>
+  <style>
+    body {
+      background: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .btn {
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #4338ca;
+      transform: scale(1.05);
+    }
+
+    .output {
+      margin-top: 20px;
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      font-size: 18px;
+      color: #374151;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn" onmouseout="makeBgGreen()" onmouseover="makeBgYellow()">Say Islamic Greeting</button>
+  <!-- <div class="output" id="outputBox">Your output will appear here.</div> -->
+
+  
+<script src="script.js"></script>
+</body>
+</html>
