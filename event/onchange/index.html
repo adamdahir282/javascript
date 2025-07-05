@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>onchange Example</title>
+</head>
+<body>
+
+  <label for="username">Enter your name:</label>
+  <input type="text" id="username" onchange="showName()">
+  <p id="output"></p>
+
+  <script>
+    function showName() {
+      let name = document.getElementById("username").value;
+      document.getElementById("output").innerText = "Hello, " + name + "!";
+    }
+  </script>
+
+</body>
+</html>

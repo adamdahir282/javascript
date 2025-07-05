@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select onchange Example</title>
+</head>
+<body>
+
+  <label for="colors">Choose a color:</label>
+  <select id="colors" onchange="changeColor()">
+    <option value="">--Select--</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+  </select>
+
+  <p id="colorDisplay">Your selected color will appear here.</p>
+
+  <script>
+    function changeColor() {
+      const color = document.getElementById("colors").value;
+      document.getElementById("colorDisplay").innerText = "You selected: " + color;
+    }
+  </script>
+
+</body>
+</html>
