@@ -1,0 +1,8 @@
+let students = new Set()
+students.add("ali")
+students.add("ahmed")
+students.add("mohamed")
+students.add("mufti")
+console.log(students)
+students.add("mufti")
+console.log(students)

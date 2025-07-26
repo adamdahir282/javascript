@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>sessionStorage List App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    .container {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    input {
+      width: 70%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      background: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+
+    .remove-btn {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .remove-btn:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>📝 My To-Do List</h2>
+    <div>
+      <input type="text" id="itemInput" placeholder="Enter new item..." />
+      <button onclick="addItem()">Add</button>
+    </div>
+    <ul id="itemList"></ul>
+  </div>
+
+  <script>
+    let itemList = document.getElementById("itemList");
+    let items = JSON.parse(sessionStorage.getItem("todoItems")) || [];
+
+    // Render items on load
+    window.onload = function () {
+      renderItems();
+    };
+
+    function addItem() {
+      const input = document.getElementById("itemInput");
+      const newItem = input.value.trim();
+      if (newItem !== "") {
+        items.push(newItem);
+        sessionStorage.setItem("todoItems", JSON.stringify(items));
+        input.value = "";
+        renderItems();
+      }
+    }
+
+    function removeItem(index) {
+      items.splice(index, 1);
+      sessionStorage.setItem("todoItems", JSON.stringify(items));
+      renderItems();
+    }
+
+    function renderItems() {
+      itemList.innerHTML = "";
+      items.forEach((item, index) => {
+        let li = document.createElement("li");
+        li.innerHTML = `
+          ${item}
+          <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+        `;
+        itemList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
